@@ -8,7 +8,7 @@ invoke the cmd "cd [folder]"
 after that "npm run dev" and open the link given
 
 # Sample:
-![alt text](https://github.com/mnhwt0108/threejs-animation/blob/sample.jpg?raw=true)
+![alt text](https://github.com/mnhwt0108/threejs-animation/blob/main/sample.jpg?raw=true)
 
 
 
