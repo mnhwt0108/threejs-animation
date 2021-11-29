@@ -1,5 +1,5 @@
 # threejs-animation
-a simple website using threejs libary for 3d model and animation
+a format portfolio website using threejs libary for 3d model and animation
 
 # Instruction:
 to run it, open the folder in VS code, make sure that you've already installed npm and threejs
