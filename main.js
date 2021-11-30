@@ -12,6 +12,8 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
+camera.position.setZ(30);
+camera.position.setX(-3);
 
 renderer.render(scene, camera);
 
@@ -25,18 +27,18 @@ const donut = new THREE.Mesh(
   })
 )
 
-const pointLight = new THREE.PointLight(0xffffff)
-pointLight.position.set(20,20,20)
+const pointLight = new THREE.PointLight(0xffffff);
+pointLight.position.set(20,20,20);
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
 
-scene.add(donut)
+scene.add(donut);
 
-scene.add(pointLight, ambientLight)
+scene.add(pointLight, ambientLight);
 
-const lightHelper = new THREE.PointLightHelper(pointLight)
-const gridHelper = new THREE.GridHelper(200, 50);
-scene.add(lightHelper,gridHelper)
+//const lightHelper = new THREE.PointLightHelper(pointLight)
+//const gridHelper = new THREE.GridHelper(200, 50);
+//scene.add(lightHelper,gridHelper)
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
@@ -51,7 +53,7 @@ function addStar(){
   scene.add(star)
 }
 
-Array(200).fill().forEach(addStar)
+Array(200).fill().forEach(addStar);
 
 const spaceTexture = new THREE.TextureLoader().load('bg2.jpg')
 scene.background = spaceTexture;
@@ -67,7 +69,7 @@ const sphere = new THREE.Mesh(
   })
 )
 
-scene.add(sphere)
+scene.add(sphere);
 
 sphere.position.z = 0;
 sphere.position.setX(0);
@@ -99,6 +101,7 @@ function moveCamera(){
 
 }
 
-document.body.onscroll = moveCamera
+document.body.onscroll = moveCamera;
+moveCamera();
 
-animate()
+animate();
